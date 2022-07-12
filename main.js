@@ -1,94 +1,21 @@
-alert("Hola! Vamos a calcular los kilometros que caminas ");
-
-const dias = parseInt(prompt("ingresa la cantidad de veces que caminas a la semana"));
-
-let total = 0;
-
-let promedio = 0;
-
-for( let i = 1; i <= dias; i++){
-    const kilometros = parseInt(prompt("ingresa la cantidad de kilometros que caminaste el dia " + i));
-    total = total + kilometros;
+let hamburguesas = 200;
+let papas = 150;
+let bebidas = 100;
+let suma = 0;
+const bebidaGratis = 100;
+const personas = parseInt(prompt("ingresa la cantidad de personas que van a comprar")); 
+    for(let i = 1; i <= personas; i++){
+        const cantHamburguesas = parseInt(prompt("ingresa la cantidad de hamburguesas del cliente N" +i));
+        const cantPapas = parseInt(prompt("ingresa la cantidad de papas del cliente N" +i));
+        const cantBebidas = parseInt(prompt("ingresa la cantidad de bebidas del cliente N" +i));  
+        sumar(cantHamburguesas, cantPapas, cantBebidas);
+    }
+let pago = parseInt(prompt("Ingrese 1 si el pago es en efectivo o 2 si es con tarjeta"));
+if (pago <= 1) {
+   alert("el total a pagar es de: " + (suma - bebidaGratis));
+} else {
+    alert("el total a pagar es de: " + suma);
 }
-
-promedio = total/dias;
-
-alert("caminaste un promedio de " + promedio + " kilometros");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// if (dias == 1) {
-//     parseInt(prompt("ingresa los kilometros del lunes"));
-// } else if (dias == 2) {
-//     parseInt(prompt("ingresa los kilometros del lunes"));
-//     parseInt(prompt("ingresa los kilometros del martes"));
-// }  else if (dias == 3) {
-//     parseInt(prompt("ingresa los kilometros del lunes"));
-//     parseInt(prompt("ingresa los kilometros del martes"));
-//     parseInt(prompt("ingresa los kilometros del miercoles"));
-// } else if (dias == 4) {
-//     parseInt(prompt("ingresa los kilometros del lunes"));
-//     parseInt(prompt("ingresa los kilometros del martes"));
-//     parseInt(prompt("ingresa los kilometros del miercoles"));
-//     parseInt(prompt("ingresa los kilometros del jueves"));
-// } else if (dias == 5) {
-//     parseInt(prompt("ingresa los kilometros del lunes"));
-//     parseInt(prompt("ingresa los kilometros del martes"));
-//     parseInt(prompt("ingresa los kilometros del miercoles"));
-//     parseInt(prompt("ingresa los kilometros del jueves"));
-//     parseInt(prompt("ingresa los kilometros del viernes"));
-// } else if (dias == 6) {
-//     parseInt(prompt("ingresa los kilometros del lunes"));
-//     parseInt(prompt("ingresa los kilometros del martes"));
-//     parseInt(prompt("ingresa los kilometros del miercoles"));
-//     parseInt(prompt("ingresa los kilometros del jueves"));
-//     parseInt(prompt("ingresa los kilometros del viernes"));
-//     parseInt(prompt("ingresa los kilometros del sabado"));
-// } else if (dias == 7) {
-//     parseInt(prompt("ingresa los kilometros del lunes"));
-//     parseInt(prompt("ingresa los kilometros del martes"));
-//     parseInt(prompt("ingresa los kilometros del miercoles"));
-//     parseInt(prompt("ingresa los kilometros del jueves"));
-//     parseInt(prompt("ingresa los kilometros del viernes"));
-//     parseInt(prompt("ingresa los kilometros del sabado"));
-//     parseInt(prompt("ingresa los kilometros del domingo"));
-// } 
-
-
-
-
-
-
-
-// let nombreApellido = prompt("ingresa tu nombre y apellido");
-
-
-
-
-
-
-
-
+function sumar (cantHamburguesas, cantPapas, cantBebidas) {   
+    suma += cantHamburguesas * hamburguesas + cantPapas * papas + cantBebidas * bebidas;      
+}
